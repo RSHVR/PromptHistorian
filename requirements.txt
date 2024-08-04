@@ -2,3 +2,4 @@ gradio
 pandas
 cohere
 openai
+svelte
