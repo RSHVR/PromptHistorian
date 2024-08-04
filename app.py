@@ -1,5 +1,6 @@
 # Environment Dependencies
 import os
+import importlib
 
 # Webapp Dependencies
 import gradio as gr
@@ -23,10 +24,37 @@ gemini_key = os.getenv('GEMINI_API_KEY')
 claude_key = os.getenv('CLAUDE_API_KEY')
 
 # Verify Installation
-## PyTorch
-x = torch.rand(5, 3)
-print(x)
-## Tensorflow
+def verify_installation():
+    libraries = ['torch', 'tensorflow', 'transformers']
+    for lib in libraries:
+        try:
+            lib_obj = importlib.import_module(lib)
+            print(f"{lib.capitalize()} is installed successfully!")
+        except ImportError:
+            print(f"Error: {lib.capitalize()} is not installed.")
 
-## Transformers
+    # Additional verification for PyTorch and TensorFlow by creating a random tensor
+    try:
+        torch.manual_seed(42)
+        x = torch.rand(5, 3)
+        if x is not None:
+            print("PyTorch: Installation verified successfully!")
+    except NameError:
+        print("PyTorch: Unable to verify installation (torch.rand not found)")
 
+    try:
+        
+        tf.random.set_seed(42)
+        x = tf.random.normal([5, 3])
+        if x is not None:
+            print("TensorFlow: Installation verified successfully!")
+    except NameError:
+        print("TensorFlow: Unable to verify installation (tf.random.normal not found)")
+
+verify_installation()
+
+
+# Load Models and APIs
+
+# Gradio based User Interface
+def 
