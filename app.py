@@ -3,6 +3,7 @@ import os
 import importlib
 import time
 import random
+import getpass
 
 # Webapp Dependencies
 import gradio as gr
@@ -14,9 +15,15 @@ import tensorflow as tf
 from transformers import pipeline
 
 # LLM Dependencies
-import cohere as co
-import openai as oa
-import huggingface_hub as hf
+from langchain_groq import ChatGroq
+from langchain_cohere import ChatCohere
+from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
+from langchain_google_vertexai import ChatVertexAI
+
+from langchain_core.messages import AIMessage
+
+
 
 #Load API Keys
 openai_key = os.getenv('OPENAI_API_KEY')
