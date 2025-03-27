@@ -1,2 +1,5 @@
 # PromptHistorian
-Gradio based webapp which displays LLM responses from various sources; Open Source, Cohere, Gemini, OpenAI, Claude, etc. and tracks all prompts sent to the model providers enabling iterative prompt development and "pair prompt engineering".
+
+> Chronicles the evolution of your conversations with AI, preserve every prompt and response for enlightened engineering.
+
+PromptHistorian is a sophisticated Gradio-based web application designed to capture, display, and analyze interactions with a diverse range of language models. This powerful tool seamlessly integrates with multiple AI providers including Open Source models, Cohere, Gemini, OpenAI, and Claude, creating a comprehensive environment for prompt development and analysis. By meticulously tracking and organizing all prompts and their corresponding responses, PromptHistorian enables developers and researchers to conduct iterative prompt refinement with unprecedented clarity. The application's comparative visualization capabilities allow users to observe how different models interpret identical prompts, facilitating deeper insights into model behavior and enabling the practice of "pair prompt engineering" - where collaborative refinement leads to optimal prompt structures and more effective AI interactions.
